@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didongviet</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    h2{
+    font-family: Impact, Heattenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+
+    <header class="row">
+        <img src="image/2.avif" class="">      
+    </header>
+    
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark"  style="background-color: rgb(170, 37, 37);">
+        <div class="container-fluid">
+          <h2>Didongviet.vn</h2>
+          <ul class="navbar-nav ml-autoff">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="iPhone Series 15" aria-label="Search" ng-model="keyword">
+                  <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </nav>
+          </ul>
+          <ul class="navbar-nav ml-autoff">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-phone"></i> Đặt hàng</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="CHGB.html"><i class="fa-solid fa-location-dot"></i> Cửa hàng gần bạn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fa-solid fa-briefcase"></i> Tra cứu giỏ hàng</a>
+                  </li>          
+                  <li class="nav-item">
+                    <a class="nav-link" href="GioHang.html"><i class="fa-solid fa-bag-shopping"></i> Giỏ Hàng</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> Tài khoản
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Đăng Nhập</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng Ký</a></li>   
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </ul>         
+        </div>
+      </nav>
+      <br>
+      <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" style="text-decoration: none; color: red;"><h6>Trang chủ</h6></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><h6>Cửa hàng gần bạn</h6></li>
+          </ol>
+        </nav>
+      </div>
+      
+      <div class="container">        
+        <div class="row">
+            <div class="col-sm-4">
+              <div class="card" style="background-color: red;">
+                <br>
+                <form>
+                  <div class="row">
+                    <div class=" col-lg-6">
+                      <form>
+                        <div class="mb-3">                      
+                          <input type="text" class="form-control" placeholder="Tỉnh/thành" aria-label="Tỉnh/thành" required>                       
+                        </div> 
+                      </form>
+                    </div>                
+                    <div class=" col-lg-6">
+                      <form>
+                        <div class="mb-3">
+                        
+                          <input type="text" class="form-control" placeholder="Quận/huyện" aria-label="Quận/huyện" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <div class="mb-3">            
+                        <input type="text" class="form-control" placeholder="Địa chỉ của bạn" aria-label="Địa chỉ của bạn" required>
+                      </div>    
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <br>
+              <div class="row">
+                <div class="card border-0 mb-3">
+                  <div class="card-header">Có 59 cửa hàng gần bạn</div>
+                  <div class="card-body">
+                    <h6 class="card-title">Cửa hàng di động việt 97 Võ Văn Ngân, Phường Linh Chiểu, Quận Thủ Đức, TP.HCM</h6>
+                    <p class="card-text">1442 Trần Hưng Đạo Phường Mỹ Long Thành phố Long Xuyên An Giang <br>
+                                          Hotline: 1800.6018 <br>
+                                          Giờ hoạt động: 08:00:00 - 22:00:00
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="card-body">
+                    <h6 class="card-title">Cửa hàng Di Động Việt 573 Xô Viết Nghệ Tĩnh, Quận Bình Thạnh, TP. HCM</h6>
+                    <p class="card-text">573 Xô Viết Nghệ Tĩnh, Phường 26, Quận Bình Thạnh, Hồ Chí Minh Phường 26 Quận Bình Thạnh Hồ Chí Minh <br>
+                                          Hotline: 1800.6018<br>
+                                          Giờ hoạt động: 08:00:00 - 22:00:00
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="card-body">
+                    <h6 class="card-title">Cửa hàng Di Động Việt 49 Lê Văn Việt, Phường Hiệp Phú, Quận 9, TP. HCM</h6>
+                    <p class="card-text">49 Lê Văn Việt Phường Hiệp Phú Quận 9 Hồ Chí Minh <br>
+                                          Hotline: 1800.6018 <br>
+                                          Giờ hoạt động: 08:00:00 - 22:00:00 <br>
+                    </p>
+                  </div>
+                </div>
+                
+              </div>
+
+            </div>
+            <div class="col-sm-8">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.473854382079!2d106.64017702308661!3d10.85151826754795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529916544ee4d%3A0x675ab171cb7d66e!2zMTQgxJAuIDUzLCBQaMaw4budbmcgMTQsIEfDsiBW4bqlcCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1664971634813!5m2!1svi!2s" width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>       
+      </div>
+    <footer class="row">
+        <div class="row">
+          <div class="col-lg-3 ps-5 pt-2">
+            <b style="color: red;">Hỗ trợ khách hàng</b>
+            <p>Danh sách cửa hàng<br>
+              Mua hàng trả góp <br>
+              Tra cứu điểm thành viên <br>
+              Tuyển dụng mới nhất</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Chính sách</b>
+            <p>Chính sách bảo hành<br>
+              Chính sách đổi trả <br>
+              Chính sách bán hàng <br>
+              Xem thêm</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Liên hệ</b>
+            <p>Kỹ thuật: <a href="#" style="text-decoration: none; margin-left: 7px;">1800.6018</a> (08:30 – 21:30)<br>
+               Bảo hành: <a href="#" style="text-decoration: none;">1800.6018</a> (09:00 – 21:00) <br>
+              Góp ý: <a href="#" style="text-decoration: none; margin-left: 24px;">1800.6018</a> (09:00 – 21:00) <br>
+              Gọi mua: <a href="#" style="text-decoration: none; margin-left: 9px;">1800.6018</a> (09:00 – 21:00) </p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Đối tác di động vịệt</b>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="image/vertu.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/vdd.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/TM.png" alt="" class="src">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </footer>
+      <script src="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+      <script src="https://kit.fontawesome.com/ed9bc91bd4.js" crossorigin="anonymous"></script>
+      <script src="angular.min.js"></script>
+
+      <script src="script.js"></script>
+</body>
+</html>

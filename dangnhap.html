@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didongviet</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    h2{
+    font-family: Impact, Heattenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+    
+      <div class="container mt-5">
+      
+            <div class="row justify-content-center">
+                  <div class="card">
+                      <div class="card-header" style="text-align: center; color: red;">
+                          <h3>ĐĂNG NHẬP</h3>
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <img src="image/dn.png" class="">
+                        </div>
+                        <div class="col-sm-6">
+                          <form name="name">
+                            <div class="mb-3" >
+                                <label for="fullname" class="form-label">Tên đăng nhập</label>
+                                <input type="text" class="form-control" ng-model="fullname" id="fullname" name="fullname" required maxlength="25" required>
+                                <span ng-show="name.fullname.$invalid">
+                                  Vui lòng nhập tên đăng nhập!
+                                </span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mật khẩu</label>
+                                <input type="password" class="form-control" ng-model="password" id="password" name="password" required>
+                                <span ng-show="name.password.$invalid">
+                                  Vui lòng nhập password!
+                                </span>
+                            </div>
+                            <a href="index.html" class="btn btn-danger"  ng-click="mua(c)">ĐĂNG NHẬP</a><br>
+                            <p style="text-align: center; color: rgb(31, 152, 227);">Quên Mật Khẩu?</p>
+                            <hr>
+                            <p style="text-align: center;">Hoặc đăng nhập bằng</p>
+                            <div class="socials-share" style="text-align: center;">
+                              <a class="" href="https://www.facebook.com/?stype=lo&deoia=1&jlou=AffXjfS-vgqHw5fDy0LaYSkNzw4i_db9fwGK4piCtKm_v09Bht3vI5OEHbFmeCjfwFUXgEVxR1z2OcCDqa7h-0Fw_qE1XK9UMT2uTkHIWpFWqg&smuh=38142&lh=Ac9rG68WQ6tfZLKEWnk"
+                               target="_blank"><span class=""></span><img src="image/fb.png" alt="" width="30px"></a>           
+                              <a class="" href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?gsiwebsdk=3&client_id=509260990228-kkn5sqp0au6gu225d6f9npsn89vfn8is.apps.googleusercontent.com&scope=openid%20profile%20email&redirect_uri=storagerelay%3A%2F%2Fhttps%2Fdidongviet.vn%3Fid%3Dauth411726&prompt=select_account&response_type=token&include_granted_scopes=true&enable_granular_consent=true&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow" 
+                              target="_blank"><span class=""></span><img src="image/google.png" alt=""  width="30px"></a>
+                          </div>
+                          <br>
+                          <p style="text-align: center;">Bạn chưa có tài khoản? <a href="#">Đăng ký tại đây</a></p>
+                          </form>
+                        </div>  
+                      </div>
+                  </div>
+            </div>
+      </div>
+    
+  </footer>
+      <script src="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+      <script src="https://kit.fontawesome.com/ed9bc91bd4.js" crossorigin="anonymous"></script>
+      <script src="angular.min.js"></script>
+      <script src="angular-route.min.js"></script>
+      
+      <script src="script.js"></script>
+</body>
+</html>

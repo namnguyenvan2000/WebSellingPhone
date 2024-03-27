@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didongviet</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    h2{
+    font-family: Impact, Heattenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+
+    <header class="row">
+        <img src="image/2.avif" class="">       
+    </header>
+    
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark"  style="background-color: rgb(170, 37, 37);">
+      <div class="container-fluid">
+        <h2>Didongviet.vn</h2>
+        <ul class="navbar-nav ml-autoff">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="iPhone Series 15" aria-label="Search" ng-model="keyword">
+                <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </div>
+          </nav>
+        </ul>
+        <ul class="navbar-nav ml-autoff">
+              <a class="navbar-brand" href="#"><i class="fa-solid fa-phone"></i> Đặt hàng</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="CHGB.html"><i class="fa-solid fa-location-dot"></i> Cửa hàng gần bạn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="fa-solid fa-briefcase"></i> Tra cứu giỏ hàng</a>
+                </li>          
+                <li class="nav-item">
+                  <a class="nav-link" href="GioHang.html"><i class="fa-solid fa-bag-shopping"></i> Giỏ Hàng</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-user"></i> Tài khoản
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Đăng Nhập</a></li>
+                    <li><a class="dropdown-item" href="#">Đăng Ký</a></li>   
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </ul>         
+      </div>
+    </nav>
+      <br>
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" style="text-decoration: none; color: red;"><h6>Trang chủ</h6></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><h6>Điện thoại</h6></li>
+          </ol>
+        </nav>
+      </div>
+    <div class="container">
+      <div class="card mb-3" style="background-color: rgb(250, 249, 249);">     
+        <div class="card-body">
+          <div class="d-flex justify-content-between ps-5" style="text-align: center;">
+            <div class="me-5">
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">iPhone</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">SAMSUNG</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">VERTUR</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">OPP0</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">XIAOMI</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">HORNO</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">VIVO</button>
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">NOKIA</button>   
+              <button type="button" class="btn btn-outline-danger me-5" style="color: black; border-color: black;">Realme</button> 
+            </div>
+          </div>
+        </div>
+      </div>     
+    </div>    
+     
+    <div class="container">
+      <div class="card " style="background-color: rgb(250, 249, 249);">
+        <br>
+        <div class="d-flex justify-content-between" >
+          <b class="ps-5 me-auto" style="color: red;"><h3>iPhone VN/A Chính Thống</h3></b>
+          <div class="me-5">
+            <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Iphone 15'">iPhone 15 Series</button>
+            <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Iphone 14'">iPhone 14 Series</button>
+            <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Iphone 13'">iPhone 13 Series</button>
+            <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Iphone 11'">iPhone 11 Series</button>
+            <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = ''">Xem tất cả</button>
+          </div>
+        </div>
+       <br>
+        <div class="row ps-3">          
+          <div class="col-sm-3"  ng-repeat="c in dsIphone | filter:keyword:fasle">
+            <a href="chitietsp.html" style="text-decoration: none;">
+              <div class="card pt-2" style="width: 18rem;">
+                <img src="{{c.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">{{c.name}}</p>
+                  <b style="color: red;">{{c.price | number : 0}} đ</b>
+                  <strike>{{c.price2 }} đ</strike>
+                </div>
+              </div>
+            </a>           
+          </div>     
+        </div>
+        <br>
+        <div class="row ps-3">
+          <div class="col-sm-3" ng-repeat="d in dsIphone2 | filter:keyword:fasle">
+            <a href="chitietsp.html" style="text-decoration: none;">
+              <div class="card pt-2" style="width: 18rem;">
+                <img src="{{d.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">{{d.name}}</p>
+                  <b style="color: red;">{{d.price}} đ</b>
+                  <strike>{{d.price2}} đ</strike>
+                </div>
+              </div>
+            </a>   
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+        <div class="card " style="background-color: rgb(250, 249, 249);">
+          <br>
+          <div class="d-flex justify-content-between" >
+            <b class="ps-5 me-auto" style="color: red;"><h3>Điện thoại Samsung Galaxy</h3></b>
+            <div class="me-5">
+              <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Samsung Galaxy Z Fold5'">Samsung Galaxy Z Fold5</button>
+              <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Samsung Galaxy Z Flip5'">Samsung Galaxy Z Flip5</button>
+              <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Samsung Galaxy Z Flip4'">Samsung Galaxy Z Flip4</button>
+              <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = 'Samsung Galaxy S23 Ultra'">Samsung Galaxy S23 Ultra</button>
+              <button type="button" class="btn btn-outline-danger" style="color: black; border-color: white;" ng-click="keyword = ''">Xem tất cả</button>
+            </div>
+          </div>
+         <br>
+          <div class="row ps-3">
+            <div class="col-sm-3" ng-repeat="e in dsSamsung | filter:keyword:fasle">
+              <div class="card pt-2" style="width: 18rem;">
+                <img src="{{e.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">{{e.name}}</p>
+                  <b style="color: red;">{{e.price}} đ</b>
+                  <strike>{{e.price2}} đ</strike>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row ps-3">
+            <div class="col-sm-3"  ng-repeat="f in dsSamsung2 | filter:keyword:fasle">
+              <div class="card pt-2" style="width: 18rem;">
+                <img src="{{f.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class="card-text">{{f.name}}</p>
+                  <b style="color: red;">{{f.price}} đ</b>
+                  <strike>{{f.price2}} đ</strike>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <div class="card" style="background-color: rgb(250, 249, 249);"> 
+       
+          <div class="d-flex justify-content-between" >
+            <b class="ps-5 me-auto" style="color: red;"><h3>Phụ kiện xịn</h3></b>
+          </div>
+          <div class="row ps-5">
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/apple_pk.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Phụ Kiện Apple
+              </a>
+            </div>
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/op.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Ốp lưng bao da
+              </a>
+            </div>
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/cap.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Cáp sạc
+              </a>
+            </div>
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/loa1.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Loa nghe nhạc
+              </a>
+            </div>
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/phukien.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Phụ kiện Macbook
+              </a>
+            </div> 
+            <div class="col-sm-2">
+              <a class="nav-link active" href="#">
+                <img src="image/dan.webp" alt="" class="rounded-1 w-50">
+                <br>
+                Dán màn hình
+              </a>
+            </div>               
+          </div>
+        </div>
+      </div>
+      <br>
+    <footer class="row">
+        <div class="row">
+          <div class="col-lg-3 ps-5 pt-2">
+            <b style="color: red;">Hỗ trợ khách hàng</b>
+            <p>Danh sách cửa hàng<br>
+              Mua hàng trả góp <br>
+              Tra cứu điểm thành viên <br>
+              Tuyển dụng mới nhất</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Chính sách</b>
+            <p>Chính sách bảo hành<br>
+              Chính sách đổi trả <br>
+              Chính sách bán hàng <br>
+              Xem thêm</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Liên hệ</b>
+            <p>Kỹ thuật: <a href="#" style="text-decoration: none; margin-left: 7px;">1800.6018</a> (08:30 – 21:30)<br>
+               Bảo hành: <a href="#" style="text-decoration: none;">1800.6018</a> (09:00 – 21:00) <br>
+              Góp ý: <a href="#" style="text-decoration: none; margin-left: 24px;">1800.6018</a> (09:00 – 21:00) <br>
+              Gọi mua: <a href="#" style="text-decoration: none; margin-left: 9px;">1800.6018</a> (09:00 – 21:00) </p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Đối tác di động vịệt</b>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="image/vertu.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/vdd.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/TM.png" alt="" class="src">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </footer>
+      <script src="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+      <script src="https://kit.fontawesome.com/ed9bc91bd4.js" crossorigin="anonymous"></script>
+      <script src="angular.min.js"></script>
+
+      <script src="script.js"></script>
+</body>
+</html>

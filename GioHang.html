@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Didongviet</title>
+    <link rel="stylesheet" href="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <style>
+    h2{
+    font-family: Impact, Heattenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 0 0 2px black;
+    padding-bottom: 0px;
+    border-bottom: 1px dotted gray;
+    margin: 0px;
+}
+h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+  </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+
+    <header class="row">
+        <img src="image/2.avif" class="">       
+    </header>
+    
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark"  style="background-color: rgb(170, 37, 37);">
+        <div class="container-fluid">
+          <h2>Didongviet.vn</h2>
+          <ul class="navbar-nav ml-autoff">
+            <nav class="navbar">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="iPhone Series 15" aria-label="Search" ng-model="keyword">
+                  <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </nav>
+          </ul>
+          <ul class="navbar-nav ml-autoff">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-phone"></i> Đặt hàng</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="CHGB.html"><i class="fa-solid fa-location-dot"></i> Cửa hàng gần bạn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#"><i class="fa-solid fa-briefcase"></i> Tra cứu giỏ hàng</a>
+                  </li>          
+                  <li class="nav-item">
+                    <a class="nav-link" href="GioHang.html"><i class="fa-solid fa-bag-shopping"></i> Giỏ Hàng</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> Tài khoản
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Đăng Nhập</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng Ký</a></li>   
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+          </ul>         
+        </div>
+      </nav>
+      <br>
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html" style="text-decoration: none;"><h6 style="color: red;">Tiếp tục mua hàng</h6></a></li>
+        </ol>
+      </nav>
+    </div>
+    
+    <div class="container" style="background-color: rgb(227, 227, 226); border-radius: 2px;">
+      <br>
+      <div class="row">
+        <div class="col">
+            <div class="card mb-3" style="background-color: rgb(253, 252, 252);" >  
+              <div class="card-body">
+                <h3 class="card-title"><i class="fa-solid fa-bag-shopping" style="color: red;"></i> Giỏ hàng - (1 sản phẩm)</h3>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <h6>Tên sản phẩm</h6>
+                  </div>
+                  <div class="col-sm-2">
+                    <h6>Đơn giá</h6>
+                  </div>
+                  <div class="col-sm-2">
+                    <h6>Số lượng</h6>
+                  </div>
+                  <div class="col-sm-2">
+                    <h6>Thành tiền</h6>
+                  </div>
+                  <div class="col-sm-2">
+                    <h6>Thao tác</h6>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row" ng-repeat="l in giohang | filter:keyword:fasle">
+                <div class="col-sm-4">
+                  <div class="row p-4">
+                    <div class="col">
+                      <img src="{{l.image}}" alt="" class="col-sm-3">
+                      <p>{{l.name}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-2">
+                  <b>{{ l.price | number : 0}} đ</b>
+                </div>
+                <div class="col-sm-2">
+                  <input class="form-control w-25" min="1" ng-model="l.soluong"
+                  type="number">
+                </div>
+                <div class="col-sm-2">
+                  <span class="text-danger fw-bold">{{l.price*l.soluong | number : 0}} đ</span>
+                </div>
+                <div class="col-sm-2">
+                  <button class="btn btn-danger" ng-click="xoa($index)"><i class="fa-solid fa-trash"></i></button>
+                  
+                </div>
+              </div>
+            </div>
+        
+            <div class="card mb-3" style="background-color: rgb(250, 250, 250);">
+                
+              <div class="card-body">
+                <h3 class="card-title"><i class="fa-solid fa-hand-holding-dollar" style="color: red;"></i> TẠM TÍNH</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h6>Tổng cộng:</h6>
+                  </div>
+                  <div class="col-sm-6">
+                    <b style="color: red;">{{getToTal() | number : 0}} đ</b>
+                  </div>
+                </div>                
+                <a href="#" class="btn btn-primary">Đặt hàng</a>
+              </div>
+            </div>         
+        </div>
+      </div>
+    </div>
+      
+      
+    <footer class="row">
+        <div class="row">
+          <div class="col-lg-3 ps-5 pt-2">
+            <b style="color: red;">Hỗ trợ khách hàng</b>
+            <p>Danh sách cửa hàng<br>
+              Mua hàng trả góp <br>
+              Tra cứu điểm thành viên <br>
+              Tuyển dụng mới nhất</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Chính sách</b>
+            <p>Chính sách bảo hành<br>
+              Chính sách đổi trả <br>
+              Chính sách bán hàng <br>
+              Xem thêm</p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Liên hệ</b>
+            <p>Kỹ thuật: <a href="#" style="text-decoration: none; margin-left: 7px;">1800.6018</a> (08:30 – 21:30)<br>
+               Bảo hành: <a href="#" style="text-decoration: none;">1800.6018</a> (09:00 – 21:00) <br>
+              Góp ý: <a href="#" style="text-decoration: none; margin-left: 24px;">1800.6018</a> (09:00 – 21:00) <br>
+              Gọi mua: <a href="#" style="text-decoration: none; margin-left: 9px;">1800.6018</a> (09:00 – 21:00) </p>
+          </div>
+          <div class="col-lg-3 pt-2">
+            <b style="color: red;">Đối tác di động vịệt</b>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="image/vertu.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/vdd.png" alt="" class="src">
+              </div>
+              <div class="col-sm-4">
+                <img src="image/TM.png" alt="" class="src">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+    </footer>
+      <script src="bootstrap-5.3.1-dist/bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
+      <script src="https://kit.fontawesome.com/ed9bc91bd4.js" crossorigin="anonymous"></script>
+      <script src="angular.min.js"></script>
+
+      <script src="script.js"></script>
+</body>
+</html>

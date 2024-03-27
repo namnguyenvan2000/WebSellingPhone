@@ -1,0 +1,6 @@
+[
+    {"id": "1", "image": "image/h4.webp", "soluong": 1, "name" : "IPhone 15pro Max 128GB Chính Hãng VN/A", "price" : 25690000, "price2" : "33.990.000"},
+    {"id": "2", "image": "image/h4.webp", "soluong": 1, "name" : "IPhone 14Pro Max 256GB Chính Hãng VN/A", "price" : 28590000, "price2" : "37.990.000"},
+    {"id": "3", "image": "image/h5.webp", "soluong": 1, "name" : "IPhone 14 128GB  -  Chính Hãng VN/A", "price" : 15790000, "price2" : "24.990.000"},
+    {"id": "4", "image": "image/h6.webp", "soluong": 1, "name" : "IPhone 11 64GB   -   Chính Hãng VN/A", "price" : 10390000, "price2" : "14.990.000"}
+]
